@@ -15,3 +15,5 @@
     <link href="<?=base_url("assets/admin/css/style.css")?>" rel="stylesheet">
 
 </head>
+<body>
+<div id="wrapper">

@@ -9,7 +9,7 @@
         function __construct()
         {
             parent::__construct();
-            $this->load->model('Login_m');
+            $this->load->model('login_m');
             $this->data['username'] = $this->session->userdata('username');
             if(!isset($this->data['username']))
             {
@@ -21,9 +21,9 @@
 
         public function index()
         {
-            $this->data['admin'] = $this->login_m->get_row($this->data['username']);
-            $this->data['content'] = 'admin/dashboard';
-            $this->data['title'] = 'dashboard'.$this->title;
+            $this->data['admin'] = $this->login_m->get_row(["username"=>$this->data['username']]);
+            $this->data['content'] = 'admin/Dashboard';
+            $this->data['title'] = 'Dashboard | '.$this->title;
             $this->data['active'] = 1;
             $this->load->view("admin/template/layout",$this->data);
 

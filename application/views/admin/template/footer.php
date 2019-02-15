@@ -19,3 +19,5 @@
 <!-- Custom and plugin javascript -->
 <script src=<?=base_url("assets/admin/js/inspinia.js")?>></script>
 <script src=<?=base_url("assets/admin/js/plugins/pace/pace.min.js")?>></script>
+</body>
+</html>
