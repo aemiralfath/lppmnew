@@ -14,7 +14,7 @@
         public function index()
         {
             $this->data['titile'] = 'Portal';
-            $this->data['content'] = 'portal/index';
+            $this->data['content'] = 'portal/home';
             $this->data['breadcrumb'] = array('Home' => base_url());
             $this->template($this->data);
         }

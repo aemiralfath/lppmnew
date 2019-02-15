@@ -11,7 +11,7 @@
 
 	<!-- Stylesheets -->
 
-	<link href="plugin-frameworks/bootstrap.css" rel="stylesheet">
+	<link href=<?=base_url("assets/portal/plugin-frameworks/bootstrap.css")?> rel="stylesheet">
 
 	<link href="fonts/ionicons.css" rel="stylesheet">
 

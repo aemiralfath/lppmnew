@@ -26,7 +26,11 @@
             $this->data['title'] = 'Dashboard | '.$this->title;
             $this->data['active'] = 1;
             $this->load->view("admin/template/layout",$this->data);
+        }
 
+        public function event()
+        {
+            
         }
     }
 ?>
