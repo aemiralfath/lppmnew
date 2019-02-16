@@ -1,12 +1,9 @@
 <!-- SCIPTS -->
 
-<script src="plugin-frameworks/jquery-3.2.1.min.js"></script>
+<script src="<?php base_url('assets/portal/plugin-frameworks/jquery-3.2.1.min.js') ?>"></script>
 
-<script src="plugin-frameworks/tether.min.js"></script>
+<script src="<?php base_url('assets/portal/plugin-frameworks/tether.min.js') ?>"></script>
 
-<script src="plugin-frameworks/bootstrap.js"></script>
+<script src="<?php base_url('assets/portal/plugin-frameworks/bootstrap.js') ?>"></script>
 
-<script src="common/scripts.js"></script>
-
-</body>
-</html>
+<script src="<?php base_url('assets/portal/common/scripts.js') ?>"></script>

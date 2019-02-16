@@ -1,10 +1,14 @@
+<!DOCTYPE HTML>
+<?php $this->load->view('portal/template/head.php'); ?>
+<body>
+	<?php $this->load->view('portal/template/navbar.php'); ?>
 
 	<div class="container">
 		<div class="h-600x h-sm-auto">
 			<div class="h-100 h-sm-auto oflow-hidden">
 
-				<div class="pb-5 pr-5 pr-sm-0 float-left float-sm-none w-2-3 w-sm-100 h-75 h-sm-300x">
-						<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<!--	<div class="pb-5 pr-5 pr-sm-0 float-left float-sm-none w-2-3 w-sm-100 h-75 h-sm-300x"> -->
+						<div id="carouselExampleIndicators" class="carousel slide pb-5 pr-5 pr-sm-0 float-left float-sm-none w-2-3 w-sm-100 h-75 h-sm-300x" data-ride="carousel">
 							<ol class="carousel-indicators">
 								<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 								<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -12,13 +16,13 @@
 							</ol>
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<img class="d-block w-100" src="images/myslider.jpg" alt="First slide">
+									<img class="d-block" src="<?php base_url('assets/portal/images/myslider.jpg') ?>" alt="First slide">
 								</div>
 								<div class="carousel-item">
-									<img class="d-block w-100" src="images/myslider.jpg" alt="Second slide">
+									<img class="d-block" src="<?php base_url('assets/portal/images/myslider.jpg') ?>" alt="Second slide">
 								</div>
 								<div class="carousel-item">
-									<img class="d-block w-100" src="images/myslider.jpg" alt="Third slide">
+									<img class="d-block" src="<?php base_url('assets/portal/images/myslider.jpg') ?>" alt="Third slide">
 								</div>
 							</div>
 							<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -29,7 +33,7 @@
 								<span class="carousel-control-next-icon" aria-hidden="true"></span>
 								<span class="sr-only">Next</span>
 							</a>
-						</div>
+					<!--	</div> -->
 				</div><!-- w-1-3 -->
 
 				<div class="float-left float-sm-none w-16-16 w-sm-100 h-75 h-sm-600x">
@@ -172,7 +176,7 @@
 					<div class="row">
 						<div class="col-sm-12">
 							<a class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
-								<div class="wh-100x abs-tlr"><img src="images/unsri_logo_small.png" alt=""></div>
+								<div class="wh-100x abs-tlr"><img src="<?php base_url('assets/portal/images/unsri_logo_small.png') ?>" alt=""></div>
 								<div class="ml-120 min-h-100x">
 									<h5><b>Bitcoin Billionares Hidding in Plain Sight</b></h5>
 									<h6 class="color-lite-black pt-10">by <span class="color-black"><b>Danile Palmer,</b></span> Jan 25, 2018</h6>
@@ -180,7 +184,7 @@
 							</a><!-- oflow-hidden -->
 
 							<a class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
-								<div class="wh-100x abs-tlr"><img src="images/ristekdikti_real_small.png" alt=""></div>
+								<div class="wh-100x abs-tlr"><img src="<?php base_url('assets/portal/images/ristekdikti_real_small.png') ?>" alt=""></div>
 								<div class="ml-120 min-h-100x">
 									<h5><b>Bitcoin Billionares Hidding in Plain Sight</b></h5>
 									<h6 class="color-lite-black pt-10">by <span class="color-black"><b>Danile Palmer,</b></span> Jan 25, 2018</h6>
@@ -188,7 +192,7 @@
 							</a><!-- oflow-hidden -->
 
 							<a class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
-								<div class="wh-100x abs-tlr"><img src="images/unsri_logo_small.png" alt=""></div>
+								<div class="wh-100x abs-tlr"><img src="<?php base_url('assets/portal/images/unsri_logo_small.png') ?>" alt=""></div>
 								<div class="ml-120 min-h-100x">
 									<h5><b>Bitcoin Billionares Hidding in Plain Sight</b></h5>
 									<h6 class="color-lite-black pt-10">by <span class="color-black"><b>Danile Palmer,</b></span> Jan 25, 2018</h6>
@@ -196,7 +200,7 @@
 							</a><!-- oflow-hidden -->
 
 							<a class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
-								<div class="wh-100x abs-tlr"><img src="images/ristekdikti_real_small.png" alt=""></div>
+								<div class="wh-100x abs-tlr"><img src="<?php base_url('assets/portal/images/ristekdikti_real_small.png') ?>" alt=""></div>
 								<div class="ml-120 min-h-100x">
 									<h5><b>Bitcoin Billionares Hidding in Plain Sight</b></h5>
 									<h6 class="color-lite-black pt-10">by <span class="color-black"><b>Danile Palmer,</b></span> Jan 25, 2018</h6>
@@ -246,3 +250,12 @@
 			</div><!-- row -->
 		</div><!-- container -->
 	</section>
+
+	<?php $this->load->view('portal/template/footer.php'); ?>
+
+	<!-- SCIPTS -->
+
+	<?php $this->load->view('portal/template/jsscript.php'); ?>
+
+</body>
+</html>

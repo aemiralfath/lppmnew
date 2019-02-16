@@ -9,7 +9,7 @@
 
 					<div class="col-sm-4">
 						<div class="mb-30">
-							<a href="#"><img src="images/logo-white.png"></a>
+							<a href="#"><img src="<?php base_url('assets/portal/images/logo-white.png') ?>"></a>
 							<p class="mtb-20 color-ccc">Bit coin is an open-source, peer-to-peer, digital decentralized cryptocurrency.
 							Powered by blockchain technology, its defining characteristic is</p>
 							<p class="color-ash"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
