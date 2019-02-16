@@ -58,8 +58,8 @@
                         <td><a href="<?=site_url('admin/event_photo/'.$e->username)?>">link</a></td>
                         <td><?=$e->nama?></td>
                         <td>
-                            <button class="btn btn-warning">Edit</button>
-                            <button class="btn btn-danger">Delete</button>
+                            <button class="btn btn-warning"><a href="<?=site_url('admin/edit_event'.$e->username)?>" style="color:white">Edit</a></button>
+                            <button class="btn btn-danger"><a href="<?=site_url('admin/delete_event'.$e->username)?>" style="color:white">Delete</a></button>
                         </td>
                     </tr>
                         <?php } ?>

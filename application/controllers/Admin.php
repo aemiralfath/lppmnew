@@ -37,5 +37,17 @@
             $this->data['active'] = 2;
             $this->load->view("admin/template/layout",$this->data);
         }
+
+        public function tambah_event()
+        {
+            $this->data['content'] = 'admin/tambah_event';
+            $this->data['title'] = 'Tambah Event | '.$this->title;
+            $this->data['active'] = 2;
+            if($this->post('submit'))
+            {
+                
+            }
+            $this->load->view("admin/template/layout",$this->data);
+        }
     }
 ?>
