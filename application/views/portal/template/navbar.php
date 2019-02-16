@@ -18,9 +18,9 @@
 						<li><a href="#"><i class="ion-social-bitcoin"></i></a></li>
 					</ul>
 
-				</div><!-- top-menu
-			</div><!-- container
-		</div><!-- bg-191 -->
+				</div>top-menu
+			</div>container
+		</div>bg-191 -->
 
 		<div class="container">
 			<a class="logo" href="index.html"><img src="<?php base_url('assets/portal/images/logo-black.png') ?>" alt="Logo"></a>

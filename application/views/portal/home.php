@@ -16,7 +16,7 @@
 							</ol>
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<img class="d-block" src="<?php base_url('assets/portal/images/myslider.jpg') ?>" alt="First slide">
+									<img class="d-block" src="<?=base_url('assets/portal/images/myslider.jpg') ?>" alt="First slide">
 								</div>
 								<div class="carousel-item">
 									<img class="d-block" src="<?php base_url('assets/portal/images/myslider.jpg') ?>" alt="Second slide">
