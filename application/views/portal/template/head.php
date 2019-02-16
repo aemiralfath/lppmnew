@@ -11,10 +11,12 @@
 
 	<!-- Stylesheets -->
 
-	<link href=<?=base_url("assets/portal/plugin-frameworks/bootstrap.css")?> rel="stylesheet">
+	<link href="<?= base_url('assets/portal/plugin-frameworks/bootstrap.css') ?>" rel="stylesheet">
 
-	<link href="<?= base_url("assets/portal/fonts/ionicons.css") ?>" rel="stylesheet">
+	<link href="<?= base_url('assets/portal/fonts/ionicons.css') ?>" rel="stylesheet">
 
-	<link href="<?= base_url("assets/portal/common/styles.css") ?>" rel="stylesheet">
+	<link href="<?= base_url('assets/portal/common/styles.css') ?>" rel="stylesheet">
+
 
 </head>
+<body>

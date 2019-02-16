@@ -1,3 +1,6 @@
-<main class="pt-5 mx-lg-2">
+
+<?php $this->load->view('portal/template/head'); ?>
+<?php $this->load->view('portal/template/navbar'); ?>
 <?php $this->load->view($content); ?>
-</main>
+<?php $this->load->view('portal/template/footer'); ?>
+<?php $this->load->view('portal/template/jsscript'); ?>
