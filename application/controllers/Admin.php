@@ -3,7 +3,6 @@
     /**
     * @author Ahmad Emir Alfatah
     */
-
     class Admin extends MY_Controller
     {
         function __construct()
@@ -11,6 +10,8 @@
             parent::__construct();
             $this->load->model('login_m');
             $this->load->model('event_m');
+            $this->load->model('admin_m');
+            $this->load->model('pengumuman_m');
             $this->data['username'] = $this->session->userdata('username');
             $this->data['admin'] = $this->login_m->get_row(["username"=>$this->data['username']]);
             if(!isset($this->data['username']))
@@ -45,9 +46,31 @@
             $this->data['active'] = 2;
             if($this->post('submit'))
             {
-                
+
             }
             $this->load->view("admin/template/layout",$this->data);
+        }
+
+        public function pengumuman()
+        {
+            $this->data['pengumuman'] = $this->pengumuman_m->getDataJoin(['admin'],['admin.username = pengumuman.username']);
+            $this->data['content'] = 'admin/pengumuman';
+            $this->data['title'] = 'Pengumuman | '.$this->title;
+            $this->data['active'] = 3;
+            $this->load->view('admin/template/layout',$this->data);
+        }
+
+        public function tambah_pengumuman()
+        {
+            $this->data['author'] = $this->admin_m->get();
+            $this->data['content'] = 'admin/tambah_pengumuman';
+            $this->data['title'] = 'Tambah Pengumuman | '.$this->title;
+            $this->data['active'] = 2;
+            if($this->post('submit'))
+            {
+
+            }
+            $this->load->view('admin/template/layout',$this->data);
         }
     }
 ?>
