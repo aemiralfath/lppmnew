@@ -10,6 +10,7 @@
 
     <link href="<?=base_url("assets/admin/css/bootstrap.min.css")?>" rel="stylesheet">
     <link href="<?=base_url("assets/admin/font-awesome/css/font-awesome.css")?>" rel="stylesheet">
+    <link href="<?=base_url("assets/admin/css/plugins/dataTables/datatables.min.css")?>" rel="stylesheet">
 
     <link href="<?=base_url("assets/admin/css/animate.css")?>" rel="stylesheet">
     <link href="<?=base_url("assets/admin/css/style.css")?>" rel="stylesheet">

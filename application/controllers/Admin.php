@@ -10,7 +10,9 @@
         {
             parent::__construct();
             $this->load->model('login_m');
+            $this->load->model('event_m');
             $this->data['username'] = $this->session->userdata('username');
+            $this->data['admin'] = $this->login_m->get_row(["username"=>$this->data['username']]);
             if(!isset($this->data['username']))
             {
                 $this->session->unset_userdata('username');
@@ -21,7 +23,6 @@
 
         public function index()
         {
-            $this->data['admin'] = $this->login_m->get_row(["username"=>$this->data['username']]);
             $this->data['content'] = 'admin/Dashboard';
             $this->data['title'] = 'Dashboard | '.$this->title;
             $this->data['active'] = 1;
@@ -30,7 +31,11 @@
 
         public function event()
         {
-            
+            $this->data['event'] = $this->event_m->get();
+            $this->data['content'] = 'admin/event';
+            $this->data['title'] = 'Event | '.$this->title;
+            $this->data['active'] = 2;
+            $this->load->view("admin/template/layout",$this->data);
         }
     }
 ?>
