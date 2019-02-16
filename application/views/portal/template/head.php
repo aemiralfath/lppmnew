@@ -11,14 +11,10 @@
 
 	<!-- Stylesheets -->
 
-<<<<<<< HEAD
-	<link href="<?php base_url('assets/plugin-frameworks/bootstrap.css') ?>" rel="stylesheet">
-=======
 	<link href=<?=base_url("assets/portal/plugin-frameworks/bootstrap.css")?> rel="stylesheet">
->>>>>>> cfc5de15d112a757782f34d8902e7eeae33877cb
 
-	<link href="fonts/ionicons.css" rel="stylesheet">
+	<link href="<?= base_url("assets/portal/fonts/ionicons.css") ?>" rel="stylesheet">
 
-	<link href="common/styles.css" rel="stylesheet">
+	<link href="<?= base_url("assets/portal/common/styles.css") ?>" rel="stylesheet">
 
 </head>
