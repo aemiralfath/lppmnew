@@ -84,7 +84,9 @@
 
         public function deletePengumuman($id)
         {
-            
+            $this->pengumuman_m->delete($id);
+            redirect('admin/pengumuman');
+            exit;
         }
     }
 ?>

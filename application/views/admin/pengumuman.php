@@ -60,8 +60,8 @@
                         <td><a href="<?=site_url('admin/pengumuman_files/'.$e->username)?>">link</a></td>
                         <td><?=$e->nama?></td>
                         <td>
-                            <button class="btn btn-warning"><a href="<?=site_url('admin/edit_event'.$e->username)?>" style="color:white">Edit</a></button>
-                            <button class="btn btn-danger"><a href="<?=site_url('admin/delete_event'.$e->username)?>" style="color:white">Delete</a></button>
+                            <button class="btn btn-warning"><a href="<?=site_url('admin/edit_event/'.$e->id_pengumuman)?>" style="color:white">Edit</a></button>
+                            <button class="btn btn-danger"><a href="<?=site_url('admin/deletePengumuman/'.$e->id_pengumuman)?>" style="color:white">Delete</a></button>
                         </td>
                     </tr>
                         <?php } ?>
