@@ -42,7 +42,7 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form method="get">
+                            <form method="POST" action="<?=site_url("admin/tambah_pengumuman")?>">
                                 <div class="form-group  row"><label class="col-sm-2 col-form-label">Title</label>
 
                                     <div class="col-sm-10"><input type="text" class="form-control" name="title" placeholder="input title"></div>
@@ -50,10 +50,14 @@
                                 <div class="hr-line-dashed"></div>
                                 <div class="ibox-content no-padding"><label class="col-sm-2 col-form-label">Content</label>
 
-                                    <div class="summernote">
-                                        
-                                    </div>
+                                    <textarea class="summernote" name="content"></textarea>
+                                    
 
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group  row"><label class="col-sm-2 col-form-label">Source</label>
+
+                                    <div class="col-sm-10"><input type="text" class="form-control" name="sumber" placeholder="input source"></div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
                                 <div class="form-group row"><label class="col-sm-2 col-form-label">Author</label>
@@ -72,8 +76,8 @@
                                 <div class="hr-line-dashed"></div>
                                 <div class="form-group row">
                                     <div class="col-sm-4 col-sm-offset-2">
-                                        <button class="btn btn-white btn-sm" type="submit">Cancel</button>
-                                        <button class="btn btn-primary btn-sm" type="submit">Save changes</button>
+                                        <input class="btn btn-white btn-sm" type="reset" value="Cancel">
+                                        <input class="btn btn-primary btn-sm" type="submit" value="Save changes" name="submit">
                                     </div>
                                 </div>
                             </form>

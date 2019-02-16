@@ -65,7 +65,7 @@
                     radioClass: 'iradio_square-green',
             });
 
-            $('.summernote').summernote();
+            $('.summernote').summernote({height:300});
 
         });
     </script>  
