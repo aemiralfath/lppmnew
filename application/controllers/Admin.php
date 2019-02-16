@@ -82,6 +82,29 @@
             $this->load->view('admin/template/layout',$this->data);
         }
 
+        public function edit_pengumuman($id)
+        {
+            $this->data['author'] = $this->admin_m->get();
+            $this->data['content'] = 'admin/edit_pengumuman';
+            $this->data['title'] = 'Edit Pengumuman | '.$this->title;
+            $this->data['pengumuman'] = $this->pengumuman_m->get_row("id_pengumuman =$id");
+            $this->data['active'] = 2;
+            if($this->post('submit'))
+            {
+                $update = [
+                    "title" => $this->post('title'),
+                    "content" => $this->post('content'),
+                    "sumber" => $this->post('sumber'),
+                    "username" => $this->post('author'),
+                ];
+                $this->pengumuman_m->update($id,$update);
+                $this->session->set_flashdata('msg', '<div class="alert alert-success alert-dismissible fade show" role="alert">Berhasil Disimpan!!<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+                redirect('admin/pengumuman');
+                exit;
+            }
+            $this->load->view('admin/template/layout',$this->data);
+        }
+
         public function deletePengumuman($id)
         {
             $this->pengumuman_m->delete($id);
