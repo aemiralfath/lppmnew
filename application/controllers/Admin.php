@@ -41,14 +41,52 @@
 
         public function tambah_event()
         {
+            $this->data['author'] = $this->admin_m->get();
             $this->data['content'] = 'admin/tambah_event';
             $this->data['title'] = 'Tambah Event | '.$this->title;
             $this->data['active'] = 2;
             if($this->post('submit'))
             {
-
+                $insert = [
+                    "title" => $this->post('title'),
+                    "content" => $this->post('content'),
+                    "username" => $this->post('author'),
+                ];
+                $this->event_m->insert($insert);
+                $this->session->set_flashdata('msg', '<div class="alert alert-success alert-dismissible fade show" role="alert">Berhasil Disimpan!!<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+                redirect('admin/event');
+                exit;
             }
             $this->load->view("admin/template/layout",$this->data);
+        }
+
+        public function edit_event($id)
+        {
+            $this->data['author'] = $this->admin_m->get();
+            $this->data['content'] = 'admin/edit_event';
+            $this->data['title'] = 'Edit Event | '.$this->title;
+            $this->data['event'] = $this->event_m->get_row("id_event =$id");
+            $this->data['active'] = 2;
+            if($this->post('submit'))
+            {
+                $update = [
+                    "title" => $this->post('title'),
+                    "content" => $this->post('content'),
+                    "username" => $this->post('author'),
+                ];
+                $this->event_m->update($id,$update);
+                $this->session->set_flashdata('msg', '<div class="alert alert-success alert-dismissible fade show" role="alert">Berhasil Disimpan!!<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+                redirect('admin/event');
+                exit;
+            }
+            $this->load->view('admin/template/layout',$this->data);
+        }
+
+        public function delete_event($id)
+        {
+            $this->event_m->delete($id);
+            redirect('admin/event');
+            exit;
         }
 
         public function pengumuman()

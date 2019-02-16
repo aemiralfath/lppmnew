@@ -1,6 +1,6 @@
 <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
-                    <h2>Form Pengumuman</h2>
+                    <h2>Form Event</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="<?=site_url()?>l">Dashboard</a>
@@ -42,31 +42,27 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form method="POST" action="<?=site_url("admin/edit_pengumuman/".$pengumuman->id_pengumuman)?>">
+                            <form method="POST" action="<?=site_url("admin/edit_event/".$event->id_event)?>">
                                 <div class="form-group  row"><label class="col-sm-2 col-form-label">Title</label>
 
-                                    <div class="col-sm-10"><input type="text" class="form-control" name="title" placeholder="input title" value="<?=$pengumuman->title?>"></div>
+                                    <div class="col-sm-10"><input type="text" class="form-control" name="title" placeholder="input title" value="<?=$event->title?>"></div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
                                 <div class="ibox-content no-padding"><label class="col-sm-2 col-form-label">Content</label>
 
-                                    <textarea class="summernote" name="content"><?=$pengumuman->content?></textarea>
+                                    <textarea class="summernote" name="content"><?=$event->content?></textarea>
                                     
 
                                 </div>
                                 <div class="hr-line-dashed"></div>
-                                <div class="form-group  row"><label class="col-sm-2 col-form-label">Source</label>
-
-                                    <div class="col-sm-10"><input type="text" class="form-control" name="sumber" placeholder="input source" value="<?=$pengumuman->sumber?>"></div>
-                                </div>
-                                <div class="hr-line-dashed"></div>
+                                
                                 <div class="form-group row"><label class="col-sm-2 col-form-label">Author</label>
 
                                     <div class="col-sm-10"><select class="form-control m-b" name="author">
                                         <?php
                                             foreach($author as $a){
                                                 ?>
-                                                <option value='<?=$a->username?>' <?php if($a->username == $pengumuman->username) echo "selected=selected" ?>><?=$a->nama?></option>
+                                                <option value='<?=$a->username?>' <?php if($a->username == $event->username) echo "selected=selected" ?>><?=$a->nama?></option>
                                                 <?php
                                             }
                                         ?>
