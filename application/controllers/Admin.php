@@ -45,9 +45,17 @@
             $this->data['active'] = 2;
             if($this->post('submit'))
             {
-                
+
             }
             $this->load->view("admin/template/layout",$this->data);
+        }
+
+        public function pengumuman()
+        {
+            $this->data['content'] = 'admin/pengumuman';
+            $this->data['title'] = 'Pengumuman | '.$this->title;
+            $this->data['active'] = 3;
+            $this->load->view('admin/template/layout',$this->data);
         }
     }
 ?>
