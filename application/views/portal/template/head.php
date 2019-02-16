@@ -11,12 +11,10 @@
 
 	<!-- Stylesheets -->
 
-	<link href="plugin-frameworks/bootstrap.css" rel="stylesheet">
+	<link href="<?php base_url('assets/plugin-frameworks/bootstrap.css') ?>" rel="stylesheet">
 
 	<link href="fonts/ionicons.css" rel="stylesheet">
-
 
 	<link href="common/styles.css" rel="stylesheet">
 
 </head>
-</body>
