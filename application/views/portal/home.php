@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
-<?php $this->load->view('template/head.php', $data); ?>
+<?php $this->load->view('portal/template/head.php'); ?>
 <body>
-	<?php $this->load->view('template/navbar.php', $data); ?>
+	<?php $this->load->view('portal/template/navbar.php'); ?>
 
 	<div class="container">
 		<div class="h-600x h-sm-auto">
@@ -16,13 +16,13 @@
 							</ol>
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<img class="d-block" src="images/myslider.jpg" alt="First slide">
+									<img class="d-block" src="<?php base_url('assets/portal/images/myslider.jpg') ?>" alt="First slide">
 								</div>
 								<div class="carousel-item">
-									<img class="d-block" src="images/myslider.jpg" alt="Second slide">
+									<img class="d-block" src="<?php base_url('assets/portal/images/myslider.jpg') ?>" alt="Second slide">
 								</div>
 								<div class="carousel-item">
-									<img class="d-block" src="images/myslider.jpg" alt="Third slide">
+									<img class="d-block" src="<?php base_url('assets/portal/images/myslider.jpg') ?>" alt="Third slide">
 								</div>
 							</div>
 							<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -251,11 +251,11 @@
 		</div><!-- container -->
 	</section>
 
-	<?php $this->load->view('template/footer.php'); ?>
+	<?php $this->load->view('portal/template/footer.php'); ?>
 
 	<!-- SCIPTS -->
 
-	<?php $this->load->view('template/jsscript.php', $data); ?>
+	<?php $this->load->view('portal/template/jsscript.php'); ?>
 
 </body>
 </html>
