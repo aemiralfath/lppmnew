@@ -31,7 +31,7 @@
 
         public function event()
         {
-            $this->data['event'] = $this->event_m->get();
+            $this->data['event'] = $this->event_m->getDataJoin(['admin'],['admin.username = event.username']);
             $this->data['content'] = 'admin/event';
             $this->data['title'] = 'Event | '.$this->title;
             $this->data['active'] = 2;
