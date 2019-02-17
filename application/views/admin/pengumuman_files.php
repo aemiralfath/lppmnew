@@ -1,15 +1,15 @@
 <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-9">
-                    <h2>Carousel</h2>
+                    <h2><?=$pengumuman[0]->title?></h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="index.html">Home</a>
+                            <a href="<?=site_url('admin')?>">Dahsboard</a>
                         </li>
                         <li class="breadcrumb-item">
-                            UI Elements
+                            Pengumuman
                         </li>
                         <li class="breadcrumb-item active">
-                            <strong>Carousel</strong>
+                            <strong>Pengumuman Files</strong>
                         </li>
                     </ol>
                 </div>
@@ -44,21 +44,19 @@
                         <div class="ibox-content">
 
                             <div id="carouselExampleBigIndicators" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
+                                <!-- <ol class="carousel-indicators">
                                     <li data-target="#carouselExampleBigIndicators" data-slide-to="0" class="active"></li>
                                     <li data-target="#carouselExampleBigIndicators" data-slide-to="1"></li>
                                     <li data-target="#carouselExampleBigIndicators" data-slide-to="2"></li>
-                                </ol>
+                                </ol> -->
                                 <div class="carousel-inner">
+                                    <?php
+                                        foreach($pengumuman as $e){
+                                    ?>
                                     <div class="carousel-item active">
-                                        <img class="d-block w-100" src="img/p_big1.jpg" alt="First slide">
+                                        <a href="<?=base_url('assets/uploads/pengumuman/'.$e->filename)?>"><?=$e->caption?></a>
                                     </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="img/p_big2.jpg" alt="Second slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="img/p_big3.jpg" alt="Third slide">
-                                    </div>
+                                        <?php } ?>
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleBigIndicators" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -74,4 +72,24 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox">
+                        <div class="ibox-title">
+                            <h5>Upload Photo</h5>
+                        </div>
+                        <div class="ibox-content">
+                        <?= form_open_multipart(site_url('admin/pengumuman_files/'.$pengumuman[0]->id_pengumuman)) ?>
+                                <div class="custom-file">
+                                    <input name="file" type="file" multiple />
+                                </div>
+                        </div>
+                        <div style="text-align:center">
+                            <input type="submit" class="btn btn-success" name="submit" value="submit">
+                        </div>
+                        <?= form_close();?>
+                    </div>
+                </div>
         </div>
+        </div>
+        

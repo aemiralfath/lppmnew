@@ -45,11 +45,11 @@
                         <div class="ibox-content">
 
                             <div id="carouselExampleBigIndicators" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
+                                <!-- <ol class="carousel-indicators">
                                     <li data-target="#carouselExampleBigIndicators" data-slide-to="0" class="active"></li>
                                     <li data-target="#carouselExampleBigIndicators" data-slide-to="1"></li>
                                     <li data-target="#carouselExampleBigIndicators" data-slide-to="2"></li>
-                                </ol>
+                                </ol> -->
                                 <div class="carousel-inner">
                                     <?php
                                         foreach($event as $e){

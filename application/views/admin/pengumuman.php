@@ -57,7 +57,7 @@
                         <td><?=$e->content?></td>
                         <td><?=$e->post_date?></td>
                         <td><?=$e->sumber?></td>
-                        <td><a href="<?=site_url('admin/pengumuman_file/'.$e->id_pengumuman)?>">link</a></td>
+                        <td><a href="<?=site_url('admin/pengumuman_files/'.$e->id_pengumuman)?>">link</a></td>
                         <td><?=$e->nama?></td>
                         <td>
                             <button class="btn btn-warning"><a href="<?=site_url('admin/edit_pengumuman/'.$e->id_pengumuman)?>" style="color:white">Edit</a></button>

@@ -167,15 +167,23 @@
             $this->load->view('admin/template/layout',$this->data);
         }
 
-        public function pengumuman_file($id)
+        public function pengumuman_files($id)
         {
             $this->data['content'] = 'admin/pengumuman_files';
-            $this->data['title'] = 'Pengumuman Files | '.$this->title;
-            $this->data['pengumuman'] = $this->pengumuman_files_m->getDataJoinWhere(['pengumuman'],['pengumuman.id_pengumuman = pengumuman_files.id_pengumuman'],['id_pengumuman_files'=>$id]);
+            $this->data['title'] = 'Pengumuman files | '.$this->title;
+            $this->data['pengumuman'] = $this->pengumuman_files_m->db->query("select pengumuman_files.*, pengumuman.* from pengumuman left outer join pengumuman_files on pengumuman.id_pengumuman = pengumuman_files.id_pengumuman where pengumuman.id_pengumuman = $id")->result();
             $this->data['active'] = 3;
-            if($this->post('submit'))
+            if($this->POST('submit'))
             {
-                
+                $this->pengumuman_files_m->insert(['id_pengumuman'=>$id]);
+                $id_file = $this->db->insert_id();
+                $temp = $this->upload_file($id_file,'pengumuman','file');
+                echo $temp;
+                $eks = explode(".",$temp);
+                print_r($eks);
+                $this->pengumuman_files_m->update($id_file,['filename'=>$id_file.'.'.$eks[1],'caption'=>$temp]);
+                redirect('admin/pengumuman_files/'.$id);
+                exit;
             }
             $this->load->view('admin/template/layout',$this->data);
         }
