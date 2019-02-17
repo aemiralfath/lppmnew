@@ -34,23 +34,23 @@
 			<div class="float-left float-sm-none w-16-16 w-sm-100 h-100 h-sm-600x">
 
 				<div class="pl-5 pb-5 pl-sm-0 ptb-sm-5 pos-relative h-50">
-					<a class="pos-relative h-100 dplay-block" href="#">
-
-						<div class="img-bg bg-2 bg-grad-layer-6"></div>
-
-						<div class="abs-blr color-white p-20 bg-sm-color-7">
-							<h4 class="mb-10 mb-sm-5"><b>MENU 1</b></h4>
+					<a class="side_menu pos-relative h-100 dplay-block" href="#">
+						<div class="abs-tlr p-20 bg-sm-color-7 text-center">
+							<div class="mb-10 mb-sm-5"><i class="fas fa-medal" style="font-size:5em"></i></div>
+						</div><!--abs-blr -->
+						<div class="abs-blr p-20 bg-sm-color-7 text-center">
+							<h5 class="mb-10 mb-sm-5"><b>Pusat Unggulan</b></h4>
 						</div><!--abs-blr -->
 					</a><!-- pos-relative -->
 				</div><!-- w-1-3 -->
 
 				<div class="pl-5 pb-5 pl-sm-0 ptb-sm-5 pos-relative h-50">
-					<a class="pos-relative h-100 dplay-block" href="#">
-
-						<div class="img-bg bg-2 bg-grad-layer-6"></div>
-
-						<div class="abs-blr color-white p-20 bg-sm-color-7">
-							<h4 class="mb-10 mb-sm-5"><b>MENU 2</b></h4>
+					<a class="side_menu pos-relative h-100 dplay-block" href="#">
+						<div class="abs-tlr p-20 bg-sm-color-7 text-center">
+							<div class="mb-10 mb-sm-5"><i class="far fa-file-alt" style="font-size:5em;"></i></div>
+						</div><!--abs-blr -->
+						<div class="abs-blr p-20 bg-sm-color-7 text-center">
+							<h5 class="mb-10 mb-sm-5"><b>E Journal</b></h4>
 						</div><!--abs-blr -->
 					</a><!-- pos-relative -->
 				</div><!-- w-1-3 -->
@@ -60,23 +60,23 @@
 			<div class="float-left float-sm-none w-16-16 w-sm-100 h-100 h-sm-600x">
 
 				<div class="pl-5 pb-5 pl-sm-0 ptb-sm-5 pos-relative h-50">
-					<a class="pos-relative h-100 dplay-block" href="#">
-
-						<div class="img-bg bg-2 bg-grad-layer-6"></div>
-
-						<div class="abs-blr color-white p-20 bg-sm-color-7">
-							<h4 class="mb-10 mb-sm-5"><b>MENU 3</b></h4>
+					<a class="side_menu pos-relative h-100 dplay-block" href="#">
+						<div class="abs-tlr p-20 bg-sm-color-7 text-center">
+							<div class="mb-10 mb-sm-5"><i class="fas fa-chart-bar" style="font-size:5em;"></i></div>
+						</div><!--abs-blr -->
+						<div class="abs-blr p-20 bg-sm-color-7 text-center">
+							<h5 class="mb-10 mb-sm-5"><b>Info Grafis</b></h4>
 						</div><!--abs-blr -->
 					</a><!-- pos-relative -->
 				</div><!-- w-1-3 -->
 
 				<div class="pl-5 pb-5 pl-sm-0 ptb-sm-5 pos-relative h-50">
-					<a class="pos-relative h-100 dplay-block" href="#">
-
-						<div class="img-bg bg-2 bg-grad-layer-6"></div>
-
-						<div class="abs-blr color-white p-20 bg-sm-color-7">
-							<h4 class="mb-10 mb-sm-5"><b>MENU 4</b></h4>
+					<a class="side_menu pos-relative h-100 dplay-block" href="#">
+						<div class="abs-tlr p-20 bg-sm-color-7 text-center">
+							<div class="mb-10 mb-sm-5"><i class="fas fa-tablet-alt" style="font-size:5em;"></i></div>
+						</div><!--abs-blr -->
+						<div class="abs-blr p-20 bg-sm-color-7 text-center">
+							<h5 class="mb-10 mb-sm-5"><b>Aplikasi</b></h4>
 						</div><!--abs-blr -->
 					</a><!-- pos-relative -->
 				</div><!-- w-1-3 -->
@@ -97,7 +97,7 @@
 				<h4 class="p-title"><b>PENGUMUMAN</b></h4>
 				<div class="row">
 					<div class="col-sm-12">
-						<a class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
+						<a class="oflow-hidden pos-relative mb-20 dplay-block" href="<?= site_url('portal/read_pengumuman') ?>">
 							<div class="wh-100x abs-tlr"><img src="<?= base_url('assets/portal/images/unsri_logo_small.png') ?>" alt=""></div>
 							<div class="ml-120 min-h-100x">
 								<h5><b>Bitcoin Billionares Hidding in Plain Sight</b></h5>
