@@ -118,9 +118,9 @@ header i{ font-size: 1.1em; }
 
 header:after{ content:''; clear: both; }
 
-header .logo{ float: left; height: 24px; margin: 28px 0; }
+header .logo{ float: left; /*height: 24px; margin: 28px 0;*/ }
 
-header .logo img{ height: 100%; width: auto; }
+header .logo img{height: 100%; width:auto; }
 
 
 header .main-menu{ float: right; }
@@ -395,8 +395,8 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu{ display: block;
 
 @media only screen and (max-width: 767px) {
 
-	.bg-sm-color-6{ background: rgba(0,0,0,.6); }
-	.bg-sm-color-7{ background: rgba(0,0,0,.7); }
+	.bg-sm-color-6{ background: rgba(0,0,0,0); }
+	.bg-sm-color-7{ background: rgba(0,0,0,0); }
 
 }
 
@@ -1970,4 +1970,12 @@ section{ padding: 50px 0; }
 .carousel-item > img{
 	width: 100%;
 	height: 444px;
+}
+
+.my_fa_icons{
+	font-size: 100px;
+}
+
+a.side_menu{
+	background-color: orange;
 }

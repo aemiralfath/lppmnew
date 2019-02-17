@@ -18,6 +18,22 @@
             $this->data['breadcrumb'] = array('Home' => base_url());
             $this->template($this->data);
         }
+
+        public function read_event()
+        {
+            $this->data['titile'] = 'Portal';
+            $this->data['content'] = 'portal/single_post';
+            $this->data['breadcrumb'] = array('Home' => base_url());
+            $this->template($this->data);
+        }
+
+        public function read_pengumuman()
+        {
+            $this->data['titile'] = 'Portal';
+            $this->data['content'] = 'portal/single_post';
+            $this->data['breadcrumb'] = array('Home' => base_url());
+            $this->template($this->data);
+        }
     }
 
 ?>
