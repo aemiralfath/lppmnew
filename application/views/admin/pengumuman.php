@@ -1,15 +1,15 @@
-            <div class="row wrapper border-bottom white-bg page-heading">
+<div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
-                    <h2>Event</h2>
+                    <h2>Pengumuman</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="<?=site_url('admin')?>">Home</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a>Event</a>
+                            <a>Pengumuman</a>
                         </li>
                         <li class="breadcrumb-item active">
-                            <strong>Data Event</strong>
+                            <strong>Data Pengumuman</strong>
                         </li>
                     </ol>
                 </div>
@@ -24,7 +24,7 @@
                     <div class="ibox-title">
                         <h5>Event</h5>
                         <div class="ibox-tools">
-                            <button class="btn btn-white"><a href="<?=site_url('admin/tambah_event')?>">+ Tambah Event</a></button>
+                            <button class="btn btn-white"><a href="<?=site_url('admin/tambah_pengumuman')?>">+ Tambah Pengumuman</a></button>
                             <a class="collapse-link">
                                 <i class="fa fa-chevron-up"></i>
                             </a>
@@ -42,6 +42,7 @@
                         <th>Title</th>
                         <th>Content</th>
                         <th>Post Date</th>
+                        <th>Source</th>
                         <th>Photo</th>
                         <th>Author</th>
                         <th>Action</th>
@@ -49,17 +50,18 @@
                     </thead>
                     <tbody>
                     <?php
-                        foreach ($event as $e) {
+                        foreach ($pengumuman as $e) {
                     ?>
                     <tr>
                         <td><?=$e->title?></td>
                         <td><?=$e->content?></td>
                         <td><?=$e->post_date?></td>
-                        <td><a href="<?=site_url('admin/event_photo/'.$e->username)?>">link</a></td>
+                        <td><?=$e->sumber?></td>
+                        <td><a href="<?=site_url('admin/pengumuman_files/'.$e->username)?>">link</a></td>
                         <td><?=$e->nama?></td>
                         <td>
-                            <button class="btn btn-warning"><a href="<?=site_url('admin/edit_event/'.$e->id_event)?>" style="color:white">Edit</a></button>
-                            <button class="btn btn-danger"><a href="<?=site_url('admin/delete_event/'.$e->id_event)?>" style="color:white">Delete</a></button>
+                            <button class="btn btn-warning"><a href="<?=site_url('admin/edit_pengumuman/'.$e->id_pengumuman)?>" style="color:white">Edit</a></button>
+                            <button class="btn btn-danger"><a href="<?=site_url('admin/deletePengumuman/'.$e->id_pengumuman)?>" style="color:white">Delete</a></button>
                         </td>
                     </tr>
                         <?php } ?>

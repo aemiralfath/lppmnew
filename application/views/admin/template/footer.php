@@ -10,17 +10,27 @@
     </div>
 </div>
 <!-- Mainly scripts -->
-<script src=<?=base_url("assets/admin/js/jquery-3.1.1.min.js")?>></script>
-<script src=<?=base_url("assets/admin/js/popper.min.js")?>></script>
-<script src=<?=base_url("assets/admin/js/bootstrap.min.js")?>></script>
-<script src=<?=base_url("assets/admin/js/plugins/metisMenu/jquery.metisMenu.js")?>></script>
-<script src=<?=base_url("assets/admin/js/plugins/slimscroll/jquery.slimscroll.min.js")?>></script>
-<script src=<?=base_url("assets/admin/js/plugins/dataTables/datatables.min.js")?>></script>
-<script src=<?=base_url("assets/admin/js/plugins/dataTables/dataTables.bootstrap4.min.js")?>></script>
+<script src="<?=base_url("assets/admin/js/jquery-3.1.1.min.js")?>"></script>
+<script src="<?=base_url("assets/admin/js/popper.min.js")?>"></script>
+<script src="<?=base_url("assets/admin/js/bootstrap.min.js")?>"></script>
+<script src="<?=base_url("assets/admin/js/plugins/metisMenu/jquery.metisMenu.js")?>"></script>
+<script src="<?=base_url("assets/admin/js/plugins/slimscroll/jquery.slimscroll.min.js")?>"></script>
+<script src="<?=base_url("assets/admin/js/plugins/dataTables/datatables.min.js")?>"></script>
+<script src="<?=base_url("assets/admin/js/plugins/dataTables/dataTables.bootstrap4.min.js")?>"></script>
 
 <!-- Custom and plugin javascript -->
-<script src=<?=base_url("assets/admin/js/inspinia.js")?>></script>
-<script src=<?=base_url("assets/admin/js/plugins/pace/pace.min.js")?>></script>
+<script src="<?=base_url("assets/admin/js/inspinia.js")?>"></script>
+<script src="<?=base_url("assets/admin/js/plugins/pace/pace.min.js")?>"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="<?=base_url("assets/admin/js/inspinia.js")?>"></script>
+    <script src="<?=base_url("assets/admin/js/plugins/pace/pace.min.js")?>"></script>
+
+    <!-- iCheck -->
+    <script src="<?=base_url("assets/admin/js/plugins/iCheck/icheck.min.js")?>"></script>
+
+    <!-- SUMMERNOTE -->
+    <script src="<?=base_url("assets/admin/js/plugins/summernote/summernote-bs4.js")?>"></script>
 
 
 <!-- Page-Level Scripts -->
@@ -50,8 +60,14 @@
 
             });
 
-        });
+            $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green',
+            });
 
+            $('.summernote').summernote({height:300});
+
+        });
     </script>  
 
 </body>
