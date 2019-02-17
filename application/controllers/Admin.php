@@ -88,13 +88,22 @@
         {
             $this->data['content'] = 'admin/event_photo';
             $this->data['title'] = 'Event Photos | '.$this->title;
-            $this->data['event'] = $this->event_photo_m->db->query("select * from event left outer join event_photo on event.id_event = event_photo.id_event where event.id_event = $id")->result();
+            $this->data['event'] = $this->event_photo_m->db->query("select event_photo.*, event.* from event left outer join event_photo on event.id_event = event_photo.id_event where event.id_event = $id")->result();
             $this->data['active'] = 2;
-            if($this->post('submit'))
+            if($this->POST('submit'))
             {
-
+                $this->event_photo_m->insert(['id_event'=>$id]);
+                $id_file = $this->db->insert_id();
+                $temp = $this->upload_file($id_file,'event','file');
+                echo $temp;
+                $eks = explode(".",$temp);
+                print_r($eks);
+                $this->event_photo_m->update($id_file,['filename'=>$id_file.'.'.$eks[1]]);
+                redirect('admin/event_photo/'.$id);
+                exit;
             }
             $this->load->view('admin/template/layout',$this->data);
+            
         }
 
         public function delete_event($id)

@@ -1,3 +1,4 @@
+<!-- <?php print_r($event) ?> -->
 <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-9">
                     <h2><?=$event[0]->title?></h2>
@@ -50,15 +51,13 @@
                                     <li data-target="#carouselExampleBigIndicators" data-slide-to="2"></li>
                                 </ol>
                                 <div class="carousel-inner">
+                                    <?php
+                                        foreach($event as $e){
+                                    ?>
                                     <div class="carousel-item active">
-                                        <img class="d-block w-100" src="img/p_big1.jpg" alt="First slide">
+                                        <img class="d-block w-100" src="<?=base_url('assets/uploads/event/'.$e->filename)?>" alt="First slide">
                                     </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="img/p_big2.jpg" alt="Second slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="img/p_big3.jpg" alt="Third slide">
-                                    </div>
+                                        <?php } ?>
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleBigIndicators" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -81,15 +80,15 @@
                             <h5>Upload Photo</h5>
                         </div>
                         <div class="ibox-content">
-                            <form action="#" class="dropzone" id="dropzoneForm">
-                                <div class="fallback">
+                        <?= form_open_multipart(site_url('admin/event_photo/'.$event[0]->id_event)) ?>
+                                <div class="custom-file">
                                     <input name="file" type="file" multiple />
                                 </div>
                         </div>
                         <div style="text-align:center">
                             <input type="submit" class="btn btn-success" name="submit" value="submit">
                         </div>
-                        </form>
+                        <?= form_close();?>
                     </div>
                 </div>
         </div>
