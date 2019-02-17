@@ -55,7 +55,7 @@
                         <td><?=$e->title?></td>
                         <td><?=$e->content?></td>
                         <td><?=$e->post_date?></td>
-                        <td><a href="<?=site_url('admin/event_photo/'.$e->username)?>">link</a></td>
+                        <td><a href="<?=site_url('admin/event_photo/'.$e->id_event)?>">link</a></td>
                         <td><?=$e->nama?></td>
                         <td>
                             <button class="btn btn-warning"><a href="<?=site_url('admin/edit_event/'.$e->id_event)?>" style="color:white">Edit</a></button>

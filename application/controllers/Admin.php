@@ -11,6 +11,8 @@
             $this->load->model('login_m');
             $this->load->model('event_m');
             $this->load->model('admin_m');
+            $this->load->model('event_photo_m');
+            $this->load->model('pengumuman_files_m');
             $this->load->model('pengumuman_m');
             $this->data['username'] = $this->session->userdata('username');
             $this->data['admin'] = $this->login_m->get_row(["username"=>$this->data['username']]);
@@ -82,6 +84,19 @@
             $this->load->view('admin/template/layout',$this->data);
         }
 
+        public function event_photo($id)
+        {
+            $this->data['content'] = 'admin/event_photo';
+            $this->data['title'] = 'Event Photos | '.$this->title;
+            $this->data['event'] = $this->event_photo_m->getDataJoinWhere(['event'],['event.id_event = event_photo.id_event'],['id_event_photo'=>$id]);
+            $this->data['active'] = 2;
+            if($this->post('submit'))
+            {
+
+            }
+            $this->load->view('admin/template/layout',$this->data);
+        }
+
         public function delete_event($id)
         {
             $this->event_m->delete($id);
@@ -139,6 +154,19 @@
                 $this->session->set_flashdata('msg', '<div class="alert alert-success alert-dismissible fade show" role="alert">Berhasil Disimpan!!<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
                 redirect('admin/pengumuman');
                 exit;
+            }
+            $this->load->view('admin/template/layout',$this->data);
+        }
+
+        public function pengumuman_file($id)
+        {
+            $this->data['content'] = 'admin/pengumuman_files';
+            $this->data['title'] = 'Pengumuman Files | '.$this->title;
+            $this->data['pengumuman'] = $this->pengumuman_files_m->getDataJoinWhere(['pengumuman'],['pengumuman.id_pengumuman = pengumuman_files.id_pengumuman'],['id_pengumuman_files'=>$id]);
+            $this->data['active'] = 3;
+            if($this->post('submit'))
+            {
+                
             }
             $this->load->view('admin/template/layout',$this->data);
         }
