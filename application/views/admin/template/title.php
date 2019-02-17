@@ -18,7 +18,10 @@
     <link href="<?=base_url("assets/admin/css/plugins/summernote/summernote-bs4.css")?>" rel="stylesheet">
     
     <link href="<?=base_url("assets/admin/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css")?>" rel="stylesheet">
-
+    <link href="<?=base_url("assets/admin/css/plugins/dropzone/basic.css")?>" rel="stylesheet">
+    <link href="<?=base_url("assets/admin/css/plugins/dropzone/dropzone.css")?>" rel="stylesheet">
+    <link href="<?=base_url("assets/admin/css/plugins/jasny/jasny-bootstrap.min.css")?>" rel="stylesheet">
+    <link href="<?=base_url("assets/admin/css/plugins/codemirror/codemirror.css")?>" rel="stylesheet">
 
 </head>
 <body>

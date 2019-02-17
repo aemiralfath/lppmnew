@@ -88,7 +88,7 @@
         {
             $this->data['content'] = 'admin/event_photo';
             $this->data['title'] = 'Event Photos | '.$this->title;
-            $this->data['event'] = $this->event_photo_m->getDataJoinWhere(['event'],['event.id_event = event_photo.id_event'],['id_event_photo'=>$id]);
+            $this->data['event'] = $this->event_photo_m->db->query("select * from event left outer join event_photo on event.id_event = event_photo.id_event where event.id_event = $id")->result();
             $this->data['active'] = 2;
             if($this->post('submit'))
             {

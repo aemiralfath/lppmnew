@@ -32,9 +32,24 @@
     <!-- SUMMERNOTE -->
     <script src="<?=base_url("assets/admin/js/plugins/summernote/summernote-bs4.js")?>"></script>
 
+     <!-- Jasny -->
+     <script src="<?=base_url("assets/admin/js/plugins/jasny/jasny-bootstrap.min.js")?>"></script>
+
+<!-- DROPZONE -->
+<script src="<?=base_url("assets/admin/js/plugins/dropzone/dropzone.js")?>"></script>
+
+<!-- CodeMirror -->
+<script src="<?=base_url("assets/admin/js/plugins/codemirror/codemirror.js")?>"></script>
+<script src="<?=base_url("assets/admin/js/plugins/codemirror/mode/xml/xml.js")?>"></script>
+
 
 <!-- Page-Level Scripts -->
 <script>
+        Dropzone.options.dropzoneForm = {
+            paramName: "file", // The name that will be used to transfer the file
+            maxFilesize: 2, // MB
+            dictDefaultMessage: "<strong>Drop files here or click to upload. </strong>"
+        };
         $(document).ready(function(){
             $('.dataTables-example').DataTable({
                 pageLength: 25,
@@ -66,6 +81,32 @@
             });
 
             $('.summernote').summernote({height:300});
+
+            var editor_one = CodeMirror.fromTextArea(document.getElementById("code1"), {
+                lineNumbers: true,
+                matchBrackets: true
+            });
+
+            var editor_two = CodeMirror.fromTextArea(document.getElementById("code2"), {
+                lineNumbers: true,
+                matchBrackets: true
+            });
+
+            var editor_two = CodeMirror.fromTextArea(document.getElementById("code3"), {
+                lineNumbers: true,
+                matchBrackets: true
+            });
+
+            var editor_two = CodeMirror.fromTextArea(document.getElementById("code4"), {
+                lineNumbers: true,
+                matchBrackets: true
+            });
+
+
+            $('.custom-file-input').on('change', function() {
+                let fileName = $(this).val().split('\\').pop();
+                $(this).next('.custom-file-label').addClass("selected").html(fileName);
+            });
 
         });
     </script>  

@@ -1,6 +1,6 @@
 <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-9">
-                    <h2><?=$event->title?></h2>
+                    <h2><?=$event[0]->title?></h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="<?=site_url('admin')?>">Dahsboard</a>
@@ -74,4 +74,24 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox">
+                        <div class="ibox-title">
+                            <h5>Upload Photo</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <form action="#" class="dropzone" id="dropzoneForm">
+                                <div class="fallback">
+                                    <input name="file" type="file" multiple />
+                                </div>
+                        </div>
+                        <div style="text-align:center">
+                            <input type="submit" class="btn btn-success" name="submit" value="submit">
+                        </div>
+                        </form>
+                    </div>
+                </div>
         </div>
+        </div>
+        
