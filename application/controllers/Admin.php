@@ -92,7 +92,13 @@
             $this->data['active'] = 2;
             if($this->POST('submit'))
             {
-                $this->event_photo_m->insert(['id_event'=>$id]);
+                $num = $this->event_photo_m->db->query("select * from event_photo where id_event = $id")->result();
+                if(count($num)>0){
+                    $this->event_photo_m->insert(['id_event'=>$id]);
+                }else{
+                    $this->event_photo_m->insert(['id_event'=>$id,'status'=>1]);
+                }
+                
                 $id_file = $this->db->insert_id();
                 $temp = $this->upload_file($id_file,'event','file');
                 echo $temp;

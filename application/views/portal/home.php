@@ -1,25 +1,33 @@
-<?= print_r($event)?>
+<!-- <?= print_r($event)?> -->
 <div class="container">
 	<div class="h-400x h-sm-auto">
 		<div class="h-100 h-sm-auto oflow-hidden">
 
 		<!--	<div class="pb-5 pr-5 pr-sm-0 float-left float-sm-none w-2-3 w-sm-100 h-75 h-sm-300x"> -->
 					<div id="carouselExampleIndicators" class="carousel slide pb-5 pr-5 pr-sm-0 float-left float-sm-none w-2-3 w-sm-100 h-100 h-sm-300x" data-ride="carousel">
-						<ol class="carousel-indicators">
+						<!-- <ol class="carousel-indicators">
 							<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 							<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 							<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-						</ol>
+						</ol> -->
 						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<img class="d-block" src="<?= base_url('assets/portal/images/myslider.jpg') ?>" alt="First slide">
-							</div>
-							<div class="carousel-item">
-								<img class="d-block" src="<?= base_url('assets/portal/images/myslider.jpg') ?>" alt="Second slide">
-							</div>
-							<div class="carousel-item">
-								<img class="d-block" src="<?= base_url('assets/portal/images/myslider.jpg') ?>" alt="Third slide">
-							</div>
+						<?php
+						$i = 0; 
+						foreach ($event as $e) {	
+							?>
+							
+								<div class="carousel-item <?php if($i++==0) echo 'active' ?>">
+								<a href="<?=site_url('portal/read_event/'.$e->id_event)?>">
+									<img class="d-block" src="<?= base_url('assets/uploads/event/'.$e->filename) ?>">
+									<div class="abs-blr color-black p-20 bg-sm-color-7">
+									<h3 class="mb-15 mb-sm-5 font-sm-13" style="background:white;"><b><?=$e->title?></b></h3>
+									
+									</div><!--abs-blr -->
+								</a>
+								</div>
+								
+								
+							<?php } ?>
 						</div>
 						<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 							<span class="carousel-control-prev-icon" aria-hidden="true"></span>

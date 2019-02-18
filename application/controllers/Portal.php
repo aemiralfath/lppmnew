@@ -19,20 +19,20 @@
         {
             $this->data['titile'] = 'Portal';
             $this->data['content'] = 'portal/home';
-            $this->data['event'] = $this->event_m->getEvent();
+            $this->data['event'] = $this->event_m->getDataJoin(['event_photo'],['event.id_event = event_photo.id_event'],'status = 1');
             $this->data['breadcrumb'] = array('Home' => base_url());
             $this->template($this->data);
         }
 
-        public function read_event()
+        public function read_event($id)
         {
             $this->data['titile'] = 'Portal';
-            $this->data['content'] = 'portal/single_post';
+            $this->data['content'] = 'portal/visi';
             $this->data['breadcrumb'] = array('Home' => base_url());
             $this->template($this->data);
         }
 
-        public function read_pengumuman()
+        public function read_pengumuman($id)
         {
             $this->data['titile'] = 'Portal';
             $this->data['content'] = 'portal/single_post';
