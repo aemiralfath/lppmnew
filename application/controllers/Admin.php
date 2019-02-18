@@ -11,6 +11,8 @@
             $this->load->model('login_m');
             $this->load->model('event_m');
             $this->load->model('admin_m');
+            $this->load->model('event_photo_m');
+            $this->load->model('pengumuman_files_m');
             $this->load->model('pengumuman_m');
             $this->data['username'] = $this->session->userdata('username');
             $this->data['admin'] = $this->login_m->get_row(["username"=>$this->data['username']]);
@@ -82,6 +84,28 @@
             $this->load->view('admin/template/layout',$this->data);
         }
 
+        public function event_photo($id)
+        {
+            $this->data['content'] = 'admin/event_photo';
+            $this->data['title'] = 'Event Photos | '.$this->title;
+            $this->data['event'] = $this->event_photo_m->db->query("select event_photo.*, event.* from event left outer join event_photo on event.id_event = event_photo.id_event where event.id_event = $id")->result();
+            $this->data['active'] = 2;
+            if($this->POST('submit'))
+            {
+                $this->event_photo_m->insert(['id_event'=>$id]);
+                $id_file = $this->db->insert_id();
+                $temp = $this->upload_file($id_file,'event','file');
+                echo $temp;
+                $eks = explode(".",$temp);
+                print_r($eks);
+                $this->event_photo_m->update($id_file,['filename'=>$id_file.'.'.$eks[1]]);
+                redirect('admin/event_photo/'.$id);
+                exit;
+            }
+            $this->load->view('admin/template/layout',$this->data);
+            
+        }
+
         public function delete_event($id)
         {
             $this->event_m->delete($id);
@@ -138,6 +162,27 @@
                 $this->pengumuman_m->update($id,$update);
                 $this->session->set_flashdata('msg', '<div class="alert alert-success alert-dismissible fade show" role="alert">Berhasil Disimpan!!<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
                 redirect('admin/pengumuman');
+                exit;
+            }
+            $this->load->view('admin/template/layout',$this->data);
+        }
+
+        public function pengumuman_files($id)
+        {
+            $this->data['content'] = 'admin/pengumuman_files';
+            $this->data['title'] = 'Pengumuman files | '.$this->title;
+            $this->data['pengumuman'] = $this->pengumuman_files_m->db->query("select pengumuman_files.*, pengumuman.* from pengumuman left outer join pengumuman_files on pengumuman.id_pengumuman = pengumuman_files.id_pengumuman where pengumuman.id_pengumuman = $id")->result();
+            $this->data['active'] = 3;
+            if($this->POST('submit'))
+            {
+                $this->pengumuman_files_m->insert(['id_pengumuman'=>$id]);
+                $id_file = $this->db->insert_id();
+                $temp = $this->upload_file($id_file,'pengumuman','file');
+                echo $temp;
+                $eks = explode(".",$temp);
+                print_r($eks);
+                $this->pengumuman_files_m->update($id_file,['filename'=>$id_file.'.'.$eks[1],'caption'=>$temp]);
+                redirect('admin/pengumuman_files/'.$id);
                 exit;
             }
             $this->load->view('admin/template/layout',$this->data);
