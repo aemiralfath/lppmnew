@@ -19,6 +19,6 @@
 
 	<link href="<?= base_url('assets/portal/common/styles.css') ?>" rel="stylesheet">
 
-
+	<link rel="shortcut icon" href="<?= base_url('assets/portal/images/unsri_logo_small.png') ?>">
 </head>
 <body>
