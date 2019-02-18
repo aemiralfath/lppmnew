@@ -106,37 +106,27 @@
 				<h4 class="p-title"><b>PENGUMUMAN</b></h4>
 				<div class="row">
 					<div class="col-sm-12">
-						<a class="oflow-hidden pos-relative mb-20 dplay-block" href="<?= site_url('portal/read_pengumuman') ?>">
-							<div class="wh-100x abs-tlr"><img src="<?= base_url('assets/portal/images/unsri_logo_small.png') ?>" alt=""></div>
+					<?php
+							foreach($portal as $p){
+						?>
+						<a class="oflow-hidden pos-relative mb-20 dplay-block" href="<?= site_url('portal/read_pengumuman/'.$p->id_pengumuman) ?>">
+						<?php if($p->sumber == 'unsri'){
+							?>
+								<div class="wh-100x abs-tlr"><img src="<?= base_url('assets/portal/images/unsri_logo_small.png') ?>" alt=""></div>
+							<?php
+						}else if($p->sumber == 'ristekdikti'){
+							?>
+								<div class="wh-100x abs-tlr"><img src="<?= base_url('assets/portal/images/ristekdikti_real_small.png') ?>" alt=""></div>
+							<?php
+						} ?>	
+						
 							<div class="ml-120 min-h-100x">
-								<h5><b>Bitcoin Billionares Hidding in Plain Sight</b></h5>
-								<h6 class="color-lite-black pt-10">by <span class="color-black"><b>Danile Palmer,</b></span> Jan 25, 2018</h6>
+								<h5><b><?=$p->title?></b></h5>
+								<h6 class="color-lite-black pt-10">by <span class="color-black"><b><?=$p->username?>,</b></span><?= $p->post_date?></h6>
 							</div>
 						</a><!-- oflow-hidden -->
+							<?php } ?>
 
-						<a class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
-							<div class="wh-100x abs-tlr"><img src="<?= base_url('assets/portal/images/unsri_logo_small.png') ?>" alt=""></div>
-							<div class="ml-120 min-h-100x">
-								<h5><b>Bitcoin Billionares Hidding in Plain Sight</b></h5>
-								<h6 class="color-lite-black pt-10">by <span class="color-black"><b>Danile Palmer,</b></span> Jan 25, 2018</h6>
-							</div>
-						</a><!-- oflow-hidden -->
-
-						<a class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
-							<div class="wh-100x abs-tlr"><img src="<?= base_url('assets/portal/images/ristekdikti_real_small.png') ?>" alt=""></div>
-							<div class="ml-120 min-h-100x">
-								<h5><b>Bitcoin Billionares Hidding in Plain Sight</b></h5>
-								<h6 class="color-lite-black pt-10">by <span class="color-black"><b>Danile Palmer,</b></span> Jan 25, 2018</h6>
-							</div>
-						</a><!-- oflow-hidden -->
-
-						<a class="oflow-hidden pos-relative mb-20 dplay-block" href="#">
-							<div class="wh-100x abs-tlr"><img src="<?= base_url('assets/portal/images/ristekdikti_real_small.png') ?>" alt=""></div>
-							<div class="ml-120 min-h-100x">
-								<h5><b>Bitcoin Billionares Hidding in Plain Sight</b></h5>
-								<h6 class="color-lite-black pt-10">by <span class="color-black"><b>Danile Palmer,</b></span> Jan 25, 2018</h6>
-							</div>
-						</a><!-- oflow-hidden -->
 					</div><!-- col-sm-6 -->
 
 				</div><!-- row -->

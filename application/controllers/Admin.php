@@ -208,5 +208,12 @@
             redirect('admin/pengumuman');
             exit;
         }
+        public function delete_pengumuman_files($id,$id_pengumuman)
+        {   
+            $name = $this->pengumuman_files_m->get_row(['id_pengumuman_files'=>$id]);
+            $this->pengumuman_files_m->delete($id);
+            unlink('./assets/uploads/pengumuman/'.$name->filename);
+            redirect('admin/pengumuman_files/'.$id_pengumuman);
+        }
     }
 ?>

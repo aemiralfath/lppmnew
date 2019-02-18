@@ -20,6 +20,7 @@
             $this->data['titile'] = 'Portal';
             $this->data['content'] = 'portal/home';
             $this->data['event'] = $this->event_m->getDataJoin(['event_photo'],['event.id_event = event_photo.id_event'],'status = 1');
+            $this->data['portal'] = $this->pengumuman_m->get();
             $this->data['breadcrumb'] = array('Home' => base_url());
             $this->template($this->data);
         }
@@ -39,8 +40,12 @@
         public function read_pengumuman($id)
         {
             $this->data['titile'] = 'Portal';
-            $this->data['content'] = 'portal/single_post';
+            $this->data['content'] = 'portal/event';
             $this->data['breadcrumb'] = array('Home' => base_url());
+            $this->data['event'] = $this->pengumuman_m->get("id_pengumuman = $id");
+            
+            $uname = $this->data['event'][0]->username;
+            $this->data['admin'] = $this->admin_m->get("username = '$uname'");
             $this->template($this->data);
         }
         public function read_sejarah()

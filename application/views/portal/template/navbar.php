@@ -1,6 +1,6 @@
 <header>
 	<div class="container">
-		<a class="logo" href="#"><img src="<?= base_url('assets/portal/images/logo-lppm.jpg') ?>" alt="Logo"></a>
+		<a class="logo" href="<?=base_url()?>"><img src="<?= base_url('assets/portal/images/logo-lppm.jpg') ?>" alt="Logo"></a>
 		<a class="right-area src-btn" href="#" >
 			<i class="active src-icn ion-search"></i>
 			<i class="close-icn ion-close"></i>
@@ -15,7 +15,7 @@
 		<a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
 
 		<ul class="main-menu" id="main-menu">
-			<li><a href="02_archive-page.html">BERANDA</a></li>
+			<li><a href="<?=base_url()?>">BERANDA</a></li>
 			<li class="drop-down"><a href="#">PROFIL<i class="ion-arrow-down-b"></i></a>
 				<ul class="drop-down-menu drop-down-inner">
 					<li><a href="<?= site_url('portal/read_sejarah') ?>">SEJARAH LPPM</a></li>

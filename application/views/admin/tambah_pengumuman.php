@@ -57,7 +57,12 @@
                                 <div class="hr-line-dashed"></div>
                                 <div class="form-group  row"><label class="col-sm-2 col-form-label">Source</label>
 
-                                    <div class="col-sm-10"><input type="text" class="form-control" name="sumber" placeholder="input source"></div>
+                                    <div class="col-sm-10">
+                                        <select class="form-control" name="sumber">
+                                                <option value="unsri">Universitas Sriwijaya</option>
+                                                <option value="ristekdikti">Ristekdikti</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
                                 <div class="form-group row"><label class="col-sm-2 col-form-label">Author</label>
