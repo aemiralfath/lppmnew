@@ -27,7 +27,11 @@
         public function read_event($id)
         {
             $this->data['titile'] = 'Portal';
-            $this->data['content'] = 'portal/visi';
+            $this->data['content'] = 'portal/event';
+            $this->data['event'] = $this->event_m->get("id_event = $id");
+            
+            $uname = $this->data['event'][0]->username;
+            $this->data['admin'] = $this->admin_m->get("username = '$uname'");
             $this->data['breadcrumb'] = array('Home' => base_url());
             $this->template($this->data);
         }
