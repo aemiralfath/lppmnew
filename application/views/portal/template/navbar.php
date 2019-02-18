@@ -1,6 +1,6 @@
 <header>
 	<div class="container">
-		<a class="logo" href="index.html"><img src="<?= base_url('assets/portal/images/unsri_logo_small.png') ?>" alt="Logo"></a>
+		<a class="logo" href="#"><img src="<?= base_url('assets/portal/images/logo-lppm.jpg') ?>" alt="Logo"></a>
 		<a class="right-area src-btn" href="#" >
 			<i class="active src-icn ion-search"></i>
 			<i class="close-icn ion-close"></i>

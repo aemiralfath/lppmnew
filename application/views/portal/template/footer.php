@@ -9,42 +9,20 @@
 
 				<div class="col-sm-4">
 					<div class="mb-30">
-						<a href="#"><img src="<?=base_url('assets/portal/images/unsri_logo_small.png') ?>"></a>
-						<p class="mtb-20 color-ccc">Bit coin is an open-source, peer-to-peer, digital decentralized cryptocurrency.
-						Powered by blockchain technology, its defining characteristic is</p>
-						<p class="color-ash"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-</p>
+						<a href="#"><img src="<?=base_url('assets/portal/images/logo-unsri-png.png') ?>"></a>
+						<p class="mtb-20 color-ccc">Kegiatan Program Pengabdian kepada Masyarakat (PPM) merupakan kegiatan penting bagi suatu pendidikan tinggi. Implementasi dan pelaksanaan kegiatan ini dilakukan oleh dosen dan mahasiswa di bawah koordinasi Lembaga Pengabdian kepada Masyarakat. Sebagai salah satu unsur Tri Dharma, kegiatan pengabdian masyarakat mesti dilaksanakan secara terintegrasi dengan unsur Tri Dharma lainnya , yaitu pendidikan dan penelitian.</p>
+						<p class="color-ash"></p>
 					</div><!-- mb-30 -->
 				</div><!-- col-md-4 -->
 
 				<div class="col-sm-4">
 					<div class="mb-30">
-						<h5 class="color-primary mb-20"><b>MOST POPULAR</b></h5>
+						<h5 class="color-primary mb-20"><b>Link</b></h5>
 						<div class="mb-20">
-							<a class="color-white" href="#"><b>Its Make or Break Time for Bitcoin</b></a>
-							<h6 class="mt-10">Jan 25, 2018</h6>
+						<a class="color-white" href="http://www.unsri.ac.id/"><b>Universitas Sriwijaya</b></a>
 						</div>
-						<div class="brdr-ash-1 opacty-2 mr-30"></div>
-						<div class="mt-20">
-							<a class="color-white" href="#"><b>Bitcoin's roller coster ride is not over</b></a>
-							<h6 class="mt-10">Jan 25, 2018</h6>
-						</div>
-					</div><!-- mb-30 -->
-				</div><!-- col-md-4 -->
-
-				<div class="col-sm-4">
-					<div class="mb-30">
-						<h5 class="color-primary mb-20"><b>MOST POPULAR</b></h5>
 						<div class="mb-20">
-							<a class="color-white" href="#"><b>Its Make or Break Time for Bitcoin</b></a>
-							<h6 class="mt-10">Jan 25, 2018</h6>
-						</div>
-						<div class="brdr-ash-1 opacty-2 mr-30"></div>
-						<div class="mt-20">
-							<a class="color-white" href="#"><b>Bitcoin's roller coster ride is not over</b></a>
-							<h6 class="mt-10">Jan 25, 2018</h6>
+						<a class="color-white" href="http://pms.unsri.ac.id/"><b>Publication Management and Service UNSRI</b></a>
 						</div>
 					</div><!-- mb-30 -->
 				</div><!-- col-md-4 -->
@@ -57,10 +35,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		<div class="oflow-hidden color-ash font-9 text-sm-center ptb-sm-5">
 
 			<ul class="float-left float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-10">
-				<li><a class="pl-0 pl-sm-10" href="#">Terms & Conditions</a></li>
-				<li><a href="#">Privacy policy</a></li>
-				<li><a href="#">Jobs advertising</a></li>
-				<li><a href="#">Contact us</a></li>
+				<li><a class="pl-0 pl-sm-10" href="http://lppm.unsri.ac.id">Home</a></li>
+				<li><a href="#">Kontak</a></li>
 			</ul>
 		<!--	<ul class="float-right float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-5">
 				<li><a class="pl-0 pl-sm-10" href="#"><i class="ion-social-facebook"></i></a></li>
