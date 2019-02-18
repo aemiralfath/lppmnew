@@ -24,7 +24,7 @@
                     <div class="ibox-title">
                         <h5>Event</h5>
                         <div class="ibox-tools">
-                            <button class="btn btn-white"><a href="<?=site_url('admin/tambah_event')?>">+ Tambah Event</a></button>
+                        <a href="<?=site_url('admin/tambah_event')?>"><button class="btn btn-white">+ Tambah Event</button></a>
                             <a class="collapse-link">
                                 <i class="fa fa-chevron-up"></i>
                             </a>
@@ -58,8 +58,8 @@
                         <td><a href="<?=site_url('admin/event_photo/'.$e->id_event)?>">link</a></td>
                         <td><?=$e->nama?></td>
                         <td>
-                            <button class="btn btn-warning"><a href="<?=site_url('admin/edit_event/'.$e->id_event)?>" style="color:white">Edit</a></button>
-                            <button class="btn btn-danger"><a href="<?=site_url('admin/delete_event/'.$e->id_event)?>" style="color:white">Delete</a></button>
+                        <a href="<?=site_url('admin/edit_event/'.$e->id_event)?>" style="color:white"><button class="btn btn-warning">Edit</button></a>
+                        <a href="<?=site_url('admin/delete_event/'.$e->id_event)?>" style="color:white"><button class="btn btn-danger">Delete</button></a>
                         </td>
                     </tr>
                         <?php } ?>

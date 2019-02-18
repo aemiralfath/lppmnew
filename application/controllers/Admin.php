@@ -113,6 +113,14 @@
             exit;
         }
 
+        public function delete_event_photo($id,$id_event)
+        {   
+            $name = $this->event_photo_m->get_row(['id_event_photo'=>$id]);
+            $this->event_photo_m->delete($id);
+            unlink('./assets/uploads/event/'.$name->filename);
+            redirect('admin/event_photo/'.$id_event);
+        }
+
         public function pengumuman()
         {
             $this->data['pengumuman'] = $this->pengumuman_m->getDataJoin(['admin'],['admin.username = pengumuman.username']);

@@ -8,13 +8,18 @@
         function __construct()
         {
             parent::__construct();
-
+            $this->load->model('event_m');
+            $this->load->model('admin_m');
+            $this->load->model('event_photo_m');
+            $this->load->model('pengumuman_files_m');
+            $this->load->model('pengumuman_m');
         }
 
         public function index()
         {
             $this->data['titile'] = 'Portal';
             $this->data['content'] = 'portal/home';
+            $this->data['event'] = $this->event_m->getEvent();
             $this->data['breadcrumb'] = array('Home' => base_url());
             $this->template($this->data);
         }

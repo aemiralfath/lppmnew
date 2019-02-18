@@ -9,5 +9,9 @@
             $this->data['primary_key'] = 'id_event';
             $this->data['table_name'] = 'event';
         }
+
+        public function getEvent(){
+            return $this->db->query('select event.*, event_photo.* from event inner join event_photo on event.id_event = event_photo.id_event')->result();
+        }
     }
 ?>

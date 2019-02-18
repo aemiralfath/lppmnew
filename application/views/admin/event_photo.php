@@ -53,11 +53,12 @@
                                 <div class="carousel-inner">
                                     <?php
                                         foreach($event as $e){
+                                                if(isset($e->filename)){
                                     ?>
                                     <div class="carousel-item active">
                                         <img class="d-block w-100" src="<?=base_url('assets/uploads/event/'.$e->filename)?>" alt="First slide">
                                     </div>
-                                        <?php } ?>
+                                        <?php }} ?>
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleBigIndicators" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -73,6 +74,25 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox">
+                        <div class="ibox-title">
+                            <h5>Hapus Photo</h5>
+                        </div>
+                        <div class="ibox-content">
+
+                            <?php
+                            $i =1;
+                                foreach($event as $e){
+                                    if(isset($e->filename)){
+                            ?>
+                                <a href="<?=site_url('admin/delete_event_photo/'.$e->id_event_photo.'/'.$e->id_event)?>" style="color:white"><button class="btn btn-danger">Hapus Foto <?=$i?></button></a>
+                                <?php $i++; }} ?>
+                        </div>
+                    </div>
+                </div>
+        </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="ibox">

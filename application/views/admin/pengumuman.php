@@ -24,7 +24,7 @@
                     <div class="ibox-title">
                         <h5>Event</h5>
                         <div class="ibox-tools">
-                            <button class="btn btn-white"><a href="<?=site_url('admin/tambah_pengumuman')?>">+ Tambah Pengumuman</a></button>
+                        <a href="<?=site_url('admin/tambah_pengumuman')?>"><button class="btn btn-white">+ Tambah Pengumuman</button></a>
                             <a class="collapse-link">
                                 <i class="fa fa-chevron-up"></i>
                             </a>
@@ -60,8 +60,8 @@
                         <td><a href="<?=site_url('admin/pengumuman_files/'.$e->id_pengumuman)?>">link</a></td>
                         <td><?=$e->nama?></td>
                         <td>
-                            <button class="btn btn-warning"><a href="<?=site_url('admin/edit_pengumuman/'.$e->id_pengumuman)?>" style="color:white">Edit</a></button>
-                            <button class="btn btn-danger"><a href="<?=site_url('admin/deletePengumuman/'.$e->id_pengumuman)?>" style="color:white">Delete</a></button>
+                            <a href="<?=site_url('admin/edit_pengumuman/'.$e->id_pengumuman)?>" style="color:white"><button class="btn btn-warning">Edit</button></a>
+                            <a href="<?=site_url('admin/deletePengumuman/'.$e->id_pengumuman)?>" style="color:white"><button class="btn btn-danger">Delete</button></a>
                         </td>
                     </tr>
                         <?php } ?>

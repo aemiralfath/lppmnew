@@ -1,3 +1,4 @@
+<?= print_r($event)?>
 <div class="container">
 	<div class="h-400x h-sm-auto">
 		<div class="h-100 h-sm-auto oflow-hidden">
