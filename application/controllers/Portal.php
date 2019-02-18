@@ -34,6 +34,48 @@
             $this->data['breadcrumb'] = array('Home' => base_url());
             $this->template($this->data);
         }
+        public function read_sejarah()
+        {
+            $this->data['titile'] = 'Portal';
+            $this->data['content'] = 'portal/sejarah';
+            $this->data['breadcrumb'] = array('Home' => base_url());
+            $this->template($this->data);
+        }
+        public function read_struktur()
+        {
+            $this->data['titile'] = 'Portal';
+            $this->data['content'] = 'portal/struktur';
+            $this->data['breadcrumb'] = array('Home' => base_url());
+            $this->template($this->data);
+        }
+        public function read_visi()
+        {
+            $this->data['titile'] = 'Portal';
+            $this->data['content'] = 'portal/visi';
+            $this->data['breadcrumb'] = array('Home' => base_url());
+            $this->template($this->data);
+        }
+        public function read_renstra()
+        {
+            $this->data['titile'] = 'Portal';
+            $this->data['content'] = 'portal/renstra';
+            $this->data['breadcrumb'] = array('Home' => base_url());
+            $this->template($this->data);
+        }
+        public function read_rip()
+        {
+            $this->data['titile'] = 'Portal';
+            $this->data['content'] = 'portal/rip';
+            $this->data['breadcrumb'] = array('Home' => base_url());
+            $this->template($this->data);
+        }
+        public function read_kontak()
+        {
+            $this->data['titile'] = 'Portal';
+            $this->data['content'] = 'portal/kontak';
+            $this->data['breadcrumb'] = array('Home' => base_url());
+            $this->template($this->data);
+        }
     }
 
 ?>

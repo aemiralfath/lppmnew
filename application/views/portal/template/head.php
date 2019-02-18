@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>Newsbit</title>
+	<title>LPPM UNSRI</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
@@ -19,6 +19,6 @@
 
 	<link href="<?= base_url('assets/portal/common/styles.css') ?>" rel="stylesheet">
 
-
+	<link rel="shortcut icon" href="<?= base_url('assets/portal/images/unsri_logo_small.png') ?>">
 </head>
 <body>

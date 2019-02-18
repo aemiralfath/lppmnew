@@ -1,6 +1,6 @@
 <header>
 	<div class="container">
-		<a class="logo" href="index.html"><img src="<?= base_url('assets/portal/images/unsri_logo_small.png') ?>" alt="Logo"></a>
+		<a class="logo" href="#"><img src="<?= base_url('assets/portal/images/logo-lppm.jpg') ?>" alt="Logo"></a>
 		<a class="right-area src-btn" href="#" >
 			<i class="active src-icn ion-search"></i>
 			<i class="close-icn ion-close"></i>
@@ -16,17 +16,16 @@
 
 		<ul class="main-menu" id="main-menu">
 			<li><a href="02_archive-page.html">BERANDA</a></li>
-			<li class="drop-down"><a href="03_single-post.html">PROFIL<i class="ion-arrow-down-b"></i></a>
+			<li class="drop-down"><a href="#">PROFIL<i class="ion-arrow-down-b"></i></a>
 				<ul class="drop-down-menu drop-down-inner">
-					<li><a href="#">SEJARAH LPPM</a></li>
-					<li><a href="#">LPPM</a></li>
-					<li><a href="#">STRUKTUR ORGANISASI</a></li>
-					<li><a href="#">VISI DAN MISI</a></li>
-					<li><a href="#">RSP</a></li>
-					<li><a href="#">RENSTRA</a></li>
+					<li><a href="<?= site_url('portal/read_sejarah') ?>">SEJARAH LPPM</a></li>
+					<li><a href="<?= site_url('portal/read_struktur') ?>">STRUKTUR ORGANISASI</a></li>
+					<li><a href="<?= site_url('portal/read_visi') ?>">VISI DAN MISI</a></li>
+					<li><a href="<?= site_url('portal/read_rip') ?>">RIP</a></li>
+					<li><a href="<?= site_url('portal/read_renstra') ?>">RENSTRA</a></li>
 				</ul>
 			</li>
-			<li><a href="04_FAQS.html">KONTAK</a></li>
+			<li><a href="<?= site_url('portal/read_kontak') ?>">KONTAK</a></li>
 		<!--<li><a href="05_FAQS-single.html">EXPLAINED</a></li>
 			<li><a href="06_contact-us.html">ICON CLAENDER</a></li>-->
 		</ul>
