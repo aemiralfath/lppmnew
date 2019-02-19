@@ -29,7 +29,7 @@
         {
             $this->data['titile'] = 'Portal';
             $this->data['content'] = 'portal/event';
-            $this->data['event'] = $this->event_m->get("id_event = $id");
+            $this->data['event'] = $this->event_m->getDataJoin(['event_photo'],['event.id_event = event_photo.id_event'],"event.id_event = $id");
             
             $uname = $this->data['event'][0]->username;
             $this->data['admin'] = $this->admin_m->get("username = '$uname'");
@@ -40,11 +40,11 @@
         public function read_pengumuman($id)
         {
             $this->data['titile'] = 'Portal';
-            $this->data['content'] = 'portal/event';
+            $this->data['content'] = 'portal/pengumuman';
             $this->data['breadcrumb'] = array('Home' => base_url());
-            $this->data['event'] = $this->pengumuman_m->get("id_pengumuman = $id");
+            $this->data['pengumuman'] = $this->pengumuman_m->getDataJoin(['pengumuman_files'],['pengumuman_files.id_pengumuman = pengumuman.id_pengumuman'],"pengumuman.id_pengumuman = $id");
             
-            $uname = $this->data['event'][0]->username;
+            $uname = $this->data['pengumuman'][0]->username;
             $this->data['admin'] = $this->admin_m->get("username = '$uname'");
             $this->template($this->data);
         }
