@@ -11,7 +11,7 @@
         }
 
         public function getEvent(){
-            return $this->db->query('select * from event inner join event_photo on event.id_event = event_photo.id_event where status = 1 order by event.post_date desc limit 1')->result();
+            return $this->db->query('select * from event inner join event_photo on event.id_event = event_photo.id_event where status = 1 order by event.post_date desc limit 5')->result();
         }
     }
 ?>

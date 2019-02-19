@@ -19,8 +19,8 @@
         {
             $this->data['titile'] = 'Portal';
             $this->data['content'] = 'portal/home';
-            $this->data['event'] = $this->event_m->getDataJoin(['event_photo'],['event.id_event = event_photo.id_event'],'status = 1');
-            $this->data['portal'] = $this->pengumuman_m->get();
+            $this->data['event'] = $this->event_m->getEvent();
+            $this->data['portal'] = $this->pengumuman_m->getPengumuman();
             $this->data['breadcrumb'] = array('Home' => base_url());
             $this->template($this->data);
         }

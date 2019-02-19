@@ -9,6 +9,10 @@
             $this->data['table_name'] = 'pengumuman';
             $this->data['primary_key'] = 'id_pengumuman';
         }
+
+        public function getPengumuman(){
+            return $this->db->query('select * from pengumuman order by post_date desc limit 5')->result();
+        }
     }
 
 ?>

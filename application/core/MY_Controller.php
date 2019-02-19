@@ -84,11 +84,11 @@ class MY_Controller extends CI_Controller
 		{
 			$upload_path = realpath(APPPATH . '../assets/uploads/' . $directory . '/');
 			@unlink($upload_path . '/' . $name);
-			$config = [
+			$config = array(
 				'file_name' 		=> $name,
 				'allowed_types'		=> '*',
 				'upload_path'		=> $upload_path
-			];
+			);
 			$this->load->library('upload');
 			$this->upload->initialize($config);
 			$this->upload->do_upload($tag_name);
@@ -103,11 +103,11 @@ class MY_Controller extends CI_Controller
 		{
 			$upload_path = realpath(APPPATH . '../assets/file/' . $directory . '/');
 			@unlink($upload_path . '/' . $id . '.pdf');
-			$config = [
+			$config = array(
 				'file_name' 		=> $id . '.pdf',
 				'allowed_types'		=> 'pdf',
 				'upload_path'		=> $upload_path
-			];
+			);
 			$this->load->library('upload');
 			$this->upload->initialize($config);
 			return $this->upload->do_upload($tag_name);
